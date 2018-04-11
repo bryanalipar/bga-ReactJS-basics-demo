@@ -1,6 +1,6 @@
 import React from 'react';
 
-const txtCenter = { textAlign: 'center' };
+const txtCenter = { textAlign: 'center', border: '1px solid orange' };
 
 export const Footer = (props) => {
 

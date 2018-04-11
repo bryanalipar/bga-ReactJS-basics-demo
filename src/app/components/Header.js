@@ -119,11 +119,11 @@ export class Header extends React.Component {
 
 		return(
 
-			<aside>
+			<aside style={{ border: '1px solid blue' }}>
 				<nav className="navigation">
 					<div className="container">
 						<ul className="nav_menu">
-							{ this.props.nav_items.tabs.map((tab, i) => <li key={ i }> <Tab href='/'>{ tab }</Tab> </li>) }
+							{ this.props.nav_items.tabs.map((tab, i) => <li key={ i }> <Tab href={ tab }>{ tab }</Tab> </li>) }
 						</ul>
 					</div>
 				</nav>

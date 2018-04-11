@@ -1,11 +1,14 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom'; 
 
 import { Footer } from './app/components/Footer';
 import { Header } from './app/components/Header';
-import { Home } from './app/components/Home';
+import { Article } from './app/components/Article';
 import { Topbar } from './app/components/Topbar';
+import Home from './Home';
+import Portfolio from './Portfolio';
 
-class App extends React.Component {
+class Root extends React.Component {
 
 	constructor() {
 		super();
@@ -94,15 +97,14 @@ class App extends React.Component {
 						nav_items={nav_items} 
 						/> 
 					</div>
-					<div className="four columns"> 
-						<Home whole_num={ whole_num.val } decimal={ whole_num.dec } other={whole_num}>
-							<h4>Child element in bold format.</h4>
-						</Home> 
-					</div>
-					<div className="four columns">
-						<Home whole_num={6} decimal={ 6.4 } other={null}>
-							<i>This is a child element.</i>
-						</Home> 
+					<div className="eight columns row" style={{ border: '1px solid red' }}>
+						<Router>
+							<div>
+								<Route exact path='/' component={Article} />
+								<Route path='/home' component={Home} />
+								<Route path='/portfolio' component={Portfolio} />
+							</div>	
+						</Router>
 					</div>
 				</div>
 				<div className="row">
@@ -118,4 +120,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default Root;

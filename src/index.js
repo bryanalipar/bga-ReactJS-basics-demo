@@ -1,18 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom'; /*Import {} something from react-dom.*/
-import App from './App';
-
-render(<App />, document.getElementById('root'));
-
+// import { BrowserRouter as Router, Route } from 'react-router-dom'; 
+import Root from './Root';
 
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+class Main extends React.Component {
 
-// console.log('It works!');
+	render() {
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+		return ( <Root /> );
+	}
+
+}
+
+render(<Main />, document.getElementById('root'));
+
+
+

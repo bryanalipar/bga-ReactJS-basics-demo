@@ -35,20 +35,22 @@ export class Topbar extends React.Component {
 		const headerStyle = { 
 
 			display: 'flex',
-			justifyContent: 'space-between'
+			justifyContent: 'space-between',
+			border: '1px solid green'
 
 		};
 
 		console.log(this.props);
 
 		return ( 
-			<header style={ headerStyle }>
+			<header className="row" style={ headerStyle }>
 			
-				<button>Unmount Sidebar</button>
+				<div className="eight columns">
+					<button>Unmount Sidebar</button>
+					<button onClick={this.props.ring}>Ring a Bell!</button>
+				</div>
 
-				<button onClick={this.props.ring}>Ring a Bell!</button>
-
-				<div className="search">
+				<div className="search four columns">
 					<input 
 						onChange={ (event) => this.onHandleChange(event) } 
 						style={{ marginRight: '.5rem' }} 

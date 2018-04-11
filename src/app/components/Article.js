@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; /*Good practice to check props passed to your components.*/
 
-export class Home extends React.Component {
+export class Article extends React.Component {
 
 	render() {
 
@@ -43,7 +43,7 @@ export class Home extends React.Component {
 	}
 }
 
-Home.propTypes = {
+Article.propTypes = {
 
 	children: PropTypes.element.isRequired,
 	decimal: PropTypes.number,
